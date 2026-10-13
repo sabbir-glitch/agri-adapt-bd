@@ -1,0 +1,11 @@
+dataset_name,source,licence_status,evidence_status,access_status_in_sandbox,used_in_current_pipeline_run
+AgriClimateBD,Mendeley Data DOI 10.17632/tb5x9gw2pt,LICENSE REQUIRES REVIEW,DOCUMENTED,BLOCKED,No
+SPAS-Dataset-BD,Mendeley Data DOI 10.17632/cphdw4z5kw,CC BY 4.0 (as described in search results; not independently confirmed),DOCUMENTED,BLOCKED,No
+Bangladesh Climate Database,data.gov.bd,LICENSE REQUIRES REVIEW,DOCUMENTED,BLOCKED,No
+BBS agricultural statistics,Bangladesh Bureau of Statistics,LICENSE REQUIRES REVIEW,DOCUMENTED,BLOCKED,No
+NASA POWER,NASA Langley Research Center,Public/open (per NASA documentation; not independently confirmed),DOCUMENTED (API structure confirmed directly),BLOCKED for live queries from this sandbox,No
+bangladesh-agroclimatic-crop-yield-2000-2024,Kaggle (firozemaliha),MIT (reported by Kaggle connector metadata; not independently confirmed),DOCUMENTED (via Kaggle connector metadata),BLOCKED,No
+potato-production-in-bangladesh-from-1980-to-2024,Kaggle (arshadrahmanziban),ODbL (reported by Kaggle connector metadata; not independently confirmed),DOCUMENTED (via Kaggle connector metadata),BLOCKED,No
+bangladesh-historical-rainfall-dataset-1948-2014,Kaggle (shuvokumarbasak2030),MIT (reported by Kaggle connector metadata; not independently confirmed),DOCUMENTED (via Kaggle connector metadata),BLOCKED,No
+synthetic_demo_v1,Generated locally by scripts/generate_synthetic_demo.py,N/A - not real data,N/A - synthetic,Available,Yes
+sajidahmed12 jute.csv / wheat.csv,GitHub sajidahmed12/Agricultural-Crop-Yield-Prediction (retrieved 2026-10-11),Upstream REPOSITORY has an MIT LICENSE (c) 2021 Sajid Ahmed. Dataset-specific redistribution rights of the underlying observations are UNRESOLVED; data is not asserted to be MIT-licensed. Raw CSVs not bundled.,OBSERVED (files opened); NOT VERIFIED - lineage from upstream-cited references (BBS '45 years Major Crops'; data.gov.bd daily rainfall) to each value unresolved; units assumed,AVAILABLE via scripts/fetch_real_data.py (SHA-256 verified),Yes (real-data run only)

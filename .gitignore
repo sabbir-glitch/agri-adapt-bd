@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.DS_Store
+
+# Real data fetched locally — never committed, per data/README.md mode separation
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/sajidahmed12_crop_data/
+data/raw/sajidahmed12_crop_data/*
+!data/raw/sajidahmed12_crop_data/ATTRIBUTION.md
+
+# Kaggle credentials — never committed
+kaggle.json
+
+# Streamlit
+.streamlit/
+
+.env
+*.key
+*.pem
+kaggle.json

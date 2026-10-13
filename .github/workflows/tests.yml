@@ -1,0 +1,25 @@
+name: tests
+
+# Default workflow: independent of any external dataset service.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Generate synthetic demo data
+        run: python scripts/generate_synthetic_demo.py
+      - name: Run tests
+        run: pytest tests/ -v
+      - name: Run pipeline (demonstration mode, no external data needed)
+        run: python scripts/run_pipeline.py --source synthetic

@@ -1,0 +1,7 @@
+experiment_id,date,source_type,dataset_name,model,n_fit,n_calibrate,n_test,MAE,RMSE,R2,conformal_halfwidth,coverage_target,empirical_coverage,random_seed,status
+EXP-20261013043005-0,2026-10-13,synthetic,synthetic_demo_v1,naive_mean_baseline,293,131,176,0.5409,0.7114,-0.01,1.0626,0.9,0.892,42,demonstration_only
+EXP-20261013043005-1,2026-10-13,synthetic,synthetic_demo_v1,ridge_regression,293,131,176,0.441,0.5843,0.3185,0.9797,0.9,0.9261,42,demonstration_only
+EXP-20261013043005-2,2026-10-13,synthetic,synthetic_demo_v1,random_forest,293,131,176,0.3928,0.5123,0.4761,0.8424,0.9,0.8977,42,demonstration_only
+EXP-REAL-20261013043007-0,2026-10-13,real,sajidahmed12_crop_data,naive_mean_baseline,868,430,600,2.4328,3.1432,-0.0285,6.8006,0.9,0.9283,42,real_unvalidated
+EXP-REAL-20261013043007-1,2026-10-13,real,sajidahmed12_crop_data,ridge_regression,868,430,600,1.5818,3.2343,-0.089,7.2114,0.9,0.9,42,real_unvalidated
+EXP-REAL-20261013043007-2,2026-10-13,real,sajidahmed12_crop_data,random_forest,868,430,600,1.2335,1.7565,0.6788,3.2681,0.9,0.9233,42,real_unvalidated

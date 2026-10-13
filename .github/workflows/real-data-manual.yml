@@ -1,0 +1,27 @@
+name: real-data-manual
+
+# Optional, manual-only workflow. Downloads the jute/wheat files from
+# raw.githubusercontent.com with SHA-256 verification (fails on mismatch)
+# and runs the real-data exploratory pipeline. Results are real, unvalidated.
+on:
+  workflow_dispatch:
+
+jobs:
+  real-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Fetch real jute/wheat files (checksum-verified)
+        run: python scripts/fetch_real_data.py --source sajidahmed12
+      - name: Run real-data pipeline
+        run: python scripts/run_real_pipeline.py
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: real-data-reports
+          path: outputs/reports/
